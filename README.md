@@ -1,64 +1,171 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<div id="top"></div>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+<!-- PROJECT SHIELDS -->
+[![Commit Activity][commit-activity-shield]][commit-activity-url]
+[![Issues][issues-shield]][issues-url]
+[![Pull Request][pull-request-shield]][pull-request-url]
+[![License][license-shield]][license-url]
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<!-- PROJECT LOGO -->
+<br />
 
-## Learning Laravel
+<h3 align="center">Qualia</h3>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+  <p align="center">
+    Platform penghubung Developer/ Tester/ UX Researcher dengan masyarakat umum dalam melakukan aktivitas survey dan testing melalui <i>Customer Experience Narratives (CxNs)</i>
+    <br />
+    <br />
+    <a href="https://github.com/dickyhermawan12/qualia">View Demo</a>
+    ·
+    <a href="https://github.com/dickyhermawan12/qualia/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/dickyhermawan12/qualia/issues">Request Feature</a>
+  </p>
+</div>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
 
-## Contributing
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+This repository is a final project repo for Software Engineering Class, Teknik Informatika, Universitas Padjadjaran.
 
-## Code of Conduct
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Built With
 
+* [Vue.js](https://vuejs.org/)
+* [Laravel](https://laravel.com/)
+* [Inertia](https://inertiajs.com/)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+In order to have this project installed and running, you need to install the following:
+- Git
+- npm
+- Composer
+- PHP >= 7.3
+
+
+### Installation and Usage
+
+1. Clone the repo
+   ```sh
+    git clone https://github.com/dickyhermawan12/qualia.git
+   ```
+2. Install Composer dependencies
+   ```sh
+    composer install
+   ```
+3. Install NPM packages
+   ```sh
+    npm install
+   ```
+4. Configure database credentials in `.env` and change the required fields. You may create the database on your local machine and connect to it
+   ```sh
+    DB_HOST=your-db-server-hostname
+    DB_DATABASE=your-db-name
+    DB_USERNAME=your-db-server-username
+    DB_PASSWORD=your-db-server-password-for-the-designated-username
+   ```
+5. Build web assets
+   ```sh
+    npm run dev
+   ```
+6. Run database migrations
+   ```sh
+    php artisan migrate
+   ```
+7. Start local development server
+   ```sh
+    php artisan serve
+   ```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- USAGE EXAMPLES -->
+## Usage
+
+_To be added_
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- ROADMAP -->
+## Roadmap
+
+- [x] Create project repo
+
+See the [open issues](https://github.com/dickyhermawan12/qualia/issues) for a full list of proposed features (and known issues).
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+<!-- LICENSE -->
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
+
+_To be added_
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[commit-activity-shield]: https://img.shields.io/github/commit-activity/w/dickyhermawan12/qualia?style=flat-square
+[commit-activity-url]: https://github.com/dickyhermawan12/qualia/graphs/commit-activity
+[issues-shield]: https://img.shields.io/github/issues/dickyhermawan12/qualia.svg?style=flat-square
+[issues-url]: https://github.com/dickyhermawan12/qualia/issues
+[pull-request-shield]: https://img.shields.io/github/issues-pr/dickyhermawan12/qualia?style=flat-square
+[pull-request-url]: https://github.com/dickyhermawan12/qualia/pulls
+[license-shield]: https://img.shields.io/github/license/dickyhermawan12/qualia.svg?style=flat-square
+[license-url]: https://github.com/dickyhermawan12/qualia/blob/master/LICENSE.txt
