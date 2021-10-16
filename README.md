@@ -12,7 +12,7 @@
 <!-- PROJECT LOGO -->
 <br />
 
-<h3 align="center">Qualia</h3>
+<h2 align="center">Qualia</h2>
 
   <p align="center">
     Platform penghubung Developer/ Tester/ UX Researcher dengan masyarakat umum dalam melakukan aktivitas survey dan testing melalui <i>Customer Experience Narratives (CxNs)</i>
@@ -42,12 +42,12 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#installation-and-running-the-project">Installation and Running the Project</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#credits">Credits</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
@@ -59,9 +59,6 @@
 ## About The Project
 
 This repository is a final project repo for Software Engineering Class, Teknik Informatika, Universitas Padjadjaran.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 ### Built With
@@ -77,6 +74,8 @@ This repository is a final project repo for Software Engineering Class, Teknik I
 <!-- GETTING STARTED -->
 ## Getting Started
 
+### Prerequisites
+
 In order to have this project installed and running, you need to install the following:
 - Git
 - npm
@@ -84,7 +83,7 @@ In order to have this project installed and running, you need to install the fol
 - PHP >= 7.3
 
 
-### Installation and Usage
+### Installation and Running the Project
 
 1. Clone the repo
    ```sh
@@ -142,12 +141,29 @@ See the [open issues](https://github.com/dickyhermawan12/qualia/issues) for a fu
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
+
+<!-- CREDITS -->
+## Credits
+
+| NPM           | Name        |
+| ------------- |-------------|
+| 140810190001  | Dicky Rahma Hermawan |
+| 140810190005  | Mohamad Fahrio Ghanial Fatihah |
+| 140810190033  | Chandra Wijaya |
+| 140810190045  | Adam Din Naufan |
+| 140810190058  | Alfathar Yusvi Habibillah |
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
 
 
 <!-- ACKNOWLEDGMENTS -->
@@ -168,4 +184,4 @@ _To be added_
 [pull-request-shield]: https://img.shields.io/github/issues-pr/dickyhermawan12/qualia?style=flat-square
 [pull-request-url]: https://github.com/dickyhermawan12/qualia/pulls
 [license-shield]: https://img.shields.io/github/license/dickyhermawan12/qualia.svg?style=flat-square
-[license-url]: https://github.com/dickyhermawan12/qualia/blob/master/LICENSE.txt
+[license-url]: https://github.com/dickyhermawan12/qualia/blob/main/LICENSE.txt
