@@ -456,7 +456,7 @@ button,
  * as it triggers the better focus styles even for links, which still use a dotted
  * outline in Firefox by default.
  */
-
+ 
 :-moz-focusring {
 	outline: auto;
 }
@@ -523,14 +523,14 @@ samp {
  *    CSS Remedy, with `svg` added as well.
  *
  *    https://github.com/mozdevs/cssremedy/issues/14
- *
+ * 
  * 2. Add `vertical-align: middle` to align replaced elements more
  *    sensibly by default when overriding `display` by adding a
  *    utility like `inline`.
  *
  *    This can trigger a poorly considered linting error in some
  *    tools but is included by design.
- *
+ * 
  *    https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210
  */
 
@@ -1151,18 +1151,6 @@ select {
 .top-0 {
 	top: 0px;
 }
-.-top-2 {
-	top: -0.5rem;
-}
-.-left-2 {
-	left: -0.5rem;
-}
-.right-2 {
-	right: 0.5rem;
-}
-.top-2 {
-	top: 0.5rem;
-}
 .z-0 {
 	z-index: 0;
 }
@@ -1181,10 +1169,6 @@ select {
 .mx-auto {
 	margin-left: auto;
 	margin-right: auto;
-}
-.mx-5 {
-	margin-left: 1.25rem;
-	margin-right: 1.25rem;
 }
 .ml-3 {
 	margin-left: 0.75rem;
@@ -1276,9 +1260,6 @@ select {
 .block {
 	display: block;
 }
-.inline-block {
-	display: inline-block;
-}
 .flex {
 	display: flex;
 }
@@ -1326,9 +1307,6 @@ select {
 }
 .h-full {
 	height: 100%;
-}
-.h-24 {
-	height: 6rem;
 }
 .min-h-screen {
 	min-height: 100vh;
@@ -1378,12 +1356,6 @@ select {
 .w-2 {
 	width: 0.5rem;
 }
-.w-40 {
-	width: 10rem;
-}
-.w-11 {
-	width: 2.75rem;
-}
 .min-w-0 {
 	min-width: 0px;
 }
@@ -1398,9 +1370,6 @@ select {
 }
 .max-w-6xl {
 	max-width: 72rem;
-}
-.max-w-lg {
-	max-width: 32rem;
 }
 .flex-1 {
 	flex: 1 1 0%;
@@ -1425,10 +1394,6 @@ select {
 	--tw-translate-y: 0px;
 	transform: var(--tw-transform);
 }
-.translate-x-0 {
-	--tw-translate-x: 0px;
-	transform: var(--tw-transform);
-}
 .scale-95 {
 	--tw-scale-x: .95;
 	--tw-scale-y: .95;
@@ -1447,9 +1412,6 @@ select {
 }
 .cursor-pointer {
 	cursor: pointer;
-}
-.cursor-move {
-	cursor: move;
 }
 .list-inside {
 	list-style-position: inside;
@@ -1543,9 +1505,6 @@ select {
 }
 .overflow-y-auto {
 	overflow-y: auto;
-}
-.overflow-x-hidden {
-	overflow-x: hidden;
 }
 .overflow-y-hidden {
 	overflow-y: hidden;
@@ -1686,10 +1645,6 @@ select {
 	--tw-bg-opacity: 1;
 	background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
 }
-.bg-\[\#5865F2\] {
-	--tw-bg-opacity: 1;
-	background-color: rgba(88, 101, 242, var(--tw-bg-opacity));
-}
 .bg-opacity-25 {
 	--tw-bg-opacity: 0.25;
 }
@@ -1816,9 +1771,6 @@ select {
 }
 .pt-24 {
 	padding-top: 6rem;
-}
-.pt-3 {
-	padding-top: 0.75rem;
 }
 .text-left {
 	text-align: left;
@@ -2005,11 +1957,6 @@ select {
 	--tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
 	box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
-.ring-0 {
-	--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-	--tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-	box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-}
 .ring-gray-300 {
 	--tw-ring-opacity: 1;
 	--tw-ring-color: rgba(209, 213, 219, var(--tw-ring-opacity));
@@ -2033,11 +1980,6 @@ select {
 }
 .transition-all {
 	transition-property: all;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	transition-duration: 150ms;
-}
-.transition-colors {
-	transition-property: background-color, border-color, color, fill, stroke;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	transition-duration: 150ms;
 }
@@ -2247,10 +2189,6 @@ select {
 .disabled\:opacity-25:disabled {
 	opacity: 0.25;
 }
-.group:hover .group-hover\:text-gray-300 {
-	--tw-text-opacity: 1;
-	color: rgba(209, 213, 219, var(--tw-text-opacity));
-}
 @media (min-width: 640px) {
 
 	.sm\:col-span-4 {
@@ -2302,22 +2240,6 @@ select {
 
 	.sm\:mt-24 {
 		margin-top: 6rem;
-	}
-
-	.sm\:mt-5 {
-		margin-top: 1.25rem;
-	}
-
-	.sm\:mt-10 {
-		margin-top: 2.5rem;
-	}
-
-	.sm\:mt-24 {
-		margin-top: 6rem;
-	}
-
-	.sm\:mt-4 {
-		margin-top: 1rem;
 	}
 
 	.sm\:block {
@@ -2478,10 +2400,6 @@ select {
 
 	.sm\:text-left {
 		text-align: left;
-	}
-
-	.sm\:leading-none {
-		line-height: 1;
 	}
 
 	.sm\:leading-none {

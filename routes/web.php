@@ -3,6 +3,7 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\ProjectsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,25 @@ Route::get('/', function () {
     ]);
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->name('dashboard');
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+    Route::get('/dashboard', function () {
+        return Inertia::render('Dashboard');
+    })->name('dashboard');
+
+    Route::get('/projects', [ProjectsController::class, 'index'])->name('projects.index');
+    Route::get('/projects/create', [ProjectsController::class, 'create'])->name('projects.create');
+    Route::post('/projects/create', [ProjectsController::class, 'createSubmit'])->name('projects.create-submit');
+    Route::get('/projects/{name}', [ProjectsController::class, 'details'])->name('projects.details');
+
+    Route::get('/history', function () {
+        return Inertia::render('History');
+    })->name('history');
+
+    Route::get('/help', function () {
+        return Inertia::render('Help');
+    })->name('help');
+
+    Route::get('/', function () {
+        return redirect()->route('dashboard');
+    });
+});

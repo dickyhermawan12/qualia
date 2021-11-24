@@ -1,5 +1,5 @@
 <template>
-    <Head title="Welcome" />
+    <Head title="The Open Source Lookback Alternative" />
 
     <div id="outer-container">
         <div class="sticky top-0 z-50">
@@ -37,7 +37,7 @@
                                     </jet-button>
                                 </span>
                             </Link>
-                            <Link :href="route('register')">
+                            <Link v-if="canRegister" :href="route('register')">
                                 <span class="sbui-btn-container">
                                     <jet-button>
                                         Register
@@ -70,7 +70,7 @@
                                                     <div class="sbui-space-row sbui-space-x-2">
                                                         <Link :href="route('login')">
                                                             <span class="sbui-btn-container">
-                                                                <jet-button class="mt-3" :href="http">
+                                                                <jet-button class="mt-3">
                                                                     Start your project
                                                                 </jet-button>
                                                             </span>
