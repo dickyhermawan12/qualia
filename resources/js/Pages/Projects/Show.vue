@@ -24,6 +24,10 @@
                             <td>{{ project.name }}</td>
                         </div>
 
+                        <div class="pt-4">
+                            <div class="border-t border-gray-200"></div>
+                        </div>
+
                         <div class="mt-6 text-gray-500">
                             <td>{{ project.description }}</td>
                         </div>

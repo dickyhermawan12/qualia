@@ -31,6 +31,10 @@ class ProjectsController extends BaseController
     public function createSubmit(Request $request)
     {
         $projects = Projects::create($request->all());
+
+        $request->session()->flash('flash.banner', 'Project successfully created!');
+        $request->session()->flash('flash.bannerStyle', 'success');
+
         return redirect()->route('projects.index');
     }
 
@@ -41,5 +45,33 @@ class ProjectsController extends BaseController
         return Inertia::render('Projects/Details', [
             'projectName' => $project->name
         ]);
+    }
+
+    public function edit(Request $request, $name)
+    {
+        $project = Projects::where('name', $name)->first();
+
+        return Inertia::render('Projects/Edit', [
+            'project' => $project
+        ]);
+    }
+
+    public function editSubmit(Request $request, $name)
+    {
+        $project = Projects::where('name', $name)
+                    ->first()
+                    ->update($request->all());
+
+        return redirect()->route('projects.details', $request->name);
+    }
+
+    public function deleteSubmit(Request $request, $name)
+    {
+        $deletedProject = Projects::where('name', $name)->delete();
+
+        $request->session()->flash('flash.banner', 'Project successfully deleted!');
+        $request->session()->flash('flash.bannerStyle', 'success');
+
+        return redirect()->route('projects.index');
     }
 }

@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class LiveSession extends Model
 {
     use HasFactory;
+
+    protected $table = 'live_sessions';
+    protected $primaryKey = 'id';
+    protected $fillable = [
+        'live_session_url',
+        'recording_url',
+        'participant_name',
+        'participant_email'
+    ];
 }

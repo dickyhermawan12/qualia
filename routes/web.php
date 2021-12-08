@@ -4,6 +4,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\ProjectsController;
+use App\Http\Middleware\RedirectIfAuthenticated;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,7 @@ use App\Http\Controllers\ProjectsController;
 |
 */
 
+
 Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
@@ -23,17 +25,27 @@ Route::get('/', function () {
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
     ]);
-});
+})->middleware(RedirectIfAuthenticated::class);
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
 
-    Route::get('/projects', [ProjectsController::class, 'index'])->name('projects.index');
-    Route::get('/projects/create', [ProjectsController::class, 'create'])->name('projects.create');
-    Route::post('/projects/create', [ProjectsController::class, 'createSubmit'])->name('projects.create-submit');
-    Route::get('/projects/{name}', [ProjectsController::class, 'details'])->name('projects.details');
+    Route::prefix('projects')->group(function() {
+        Route::name('projects.')->group(function() {
+            Route::get('/', [ProjectsController::class, 'index'])->name('index');
+            Route::get('/create', [ProjectsController::class, 'create'])->name('create');
+            Route::post('/create', [ProjectsController::class, 'createSubmit'])->name('create-submit');
+            Route::get('/{name}', [ProjectsController::class, 'details'])->name('details');
+
+            Route::get('/{name}/edit', [ProjectsController::class, 'edit'])->name('edit');
+            Route::put('/{name}/edit', [ProjectsController::class, 'editSubmit'])->name('edit-submit');
+
+            Route::delete('/{name}/delete', [ProjectsController::class, 'deleteSubmit'])->name('delete-submit');
+        });
+    });
+
 
     Route::get('/history', function () {
         return Inertia::render('History');
@@ -42,8 +54,4 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/help', function () {
         return Inertia::render('Help');
     })->name('help');
-
-    Route::get('/', function () {
-        return redirect()->route('dashboard');
-    });
 });
