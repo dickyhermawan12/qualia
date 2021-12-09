@@ -12,14 +12,17 @@
 <!-- PROJECT LOGO -->
 <br />
 
-<h2 align="center">Qualia</h2>
+<div align="center">
+  <a href="https://github.com/dickyhermawan12/qualia">
+    <img src="public/favicon/android-icon-96x96.png" alt="Logo" width="80" height="80">
+  </a>
+
+  <h2 align="center">Qualia</h2>
 
   <p align="center">
-    Platform penghubung Developer/ Tester/ UX Researcher dengan masyarakat umum dalam melakukan aktivitas survey dan testing melalui <i>Customer Experience Narratives (CxNs)</i>
+    Real-Time Application Feedback and Testing Platform for Developers and Testers.
     <br />
     <br />
-    <a href="https://github.com/dickyhermawan12/qualia">View Demo</a>
-    ·
     <a href="https://github.com/dickyhermawan12/qualia/issues">Report Bug</a>
     ·
     <a href="https://github.com/dickyhermawan12/qualia/issues">Request Feature</a>
@@ -66,6 +69,8 @@ This repository is a final project repo for Software Engineering Class, Teknik I
 * [Vue.js](https://vuejs.org/)
 * [Laravel](https://laravel.com/)
 * [Inertia](https://inertiajs.com/)
+* [React Native](https://reactnative.dev/)
+* [Agora](https://agora.io/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -104,9 +109,9 @@ In order to have this project installed and running, you need to install the fol
     DB_USERNAME=your-db-server-username
     DB_PASSWORD=your-db-server-password-for-the-designated-username
    ```
-5. Build web assets
+5. Build web assets and run vcon service
    ```sh
-    npm run dev
+    npm run ignite
    ```
 6. Run database migrations
    ```sh
@@ -124,7 +129,11 @@ In order to have this project installed and running, you need to install the fol
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-_To be added_
+1. Register for a new account.
+2. You will initially be given access to a personal team. You may want to create a new team and invite other user by email.
+3. Create a project corresponding to your team.
+4. Arrange new live session for your project. Fill the participant identity and start the live session by clicking **Join**.
+5. Now enjoy the real-time interaction with video and chat feature for your feedback and live testing session! 
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -135,6 +144,8 @@ _To be added_
 ## Roadmap
 
 - [x] Create project repo
+- [x] Form account, project, and live session schematics and implementations
+- [x] Integrate video conferencing and chat feature using Agora
 
 See the [open issues](https://github.com/dickyhermawan12/qualia/issues) for a full list of proposed features (and known issues).
 
@@ -169,7 +180,11 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-_To be added_
+* [Microsoft Azure](https://azure.microsoft.com/)
+* [Heroicons](https://heroicons.com/)
+* [Webpack](https://webpack.js.org/)
+* [Vue Loader](https://vue-loader.vuejs.org/)
+* [TailwindCSS](https://tailwindcss.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
