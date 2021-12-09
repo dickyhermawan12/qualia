@@ -8,15 +8,16 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
-use App\Models\Projects;
+use App\Models\Project;
+use App\Models\LiveSession;
 
-class ProjectsController extends BaseController
+class ProjectController extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public function index()
+    public function index(Request $request)
     {
-        $projects = Projects::all();
+        $projects = Project::where('id_team', $request->user()->currentTeam->id)->get();
 
         return Inertia::render('Projects/Show', [
             'projects' => $projects
@@ -30,7 +31,9 @@ class ProjectsController extends BaseController
 
     public function createSubmit(Request $request)
     {
-        $projects = Projects::create($request->all());
+        $projects = Project::create(
+            array_merge(['id_team' => $request->user()->currentTeam->id], $request->all()
+        ));
 
         $request->session()->flash('flash.banner', 'Project successfully created!');
         $request->session()->flash('flash.bannerStyle', 'success');
@@ -40,16 +43,18 @@ class ProjectsController extends BaseController
 
     public function details(Request $request, $name)
     {
-        $project = Projects::where('name', $name)->first();
+        $project = Project::where('name', $name)->first();
+        $liveSessions = LiveSession::where('id_project', $project->id)->get();
 
         return Inertia::render('Projects/Details', [
-            'projectName' => $project->name
+            'project' => $project,
+            'liveSessions' => $liveSessions
         ]);
     }
 
     public function edit(Request $request, $name)
     {
-        $project = Projects::where('name', $name)->first();
+        $project = Project::where('name', $name)->first();
 
         return Inertia::render('Projects/Edit', [
             'project' => $project
@@ -58,16 +63,16 @@ class ProjectsController extends BaseController
 
     public function editSubmit(Request $request, $name)
     {
-        $project = Projects::where('name', $name)
+        $project = Project::where('name', $name)
                     ->first()
                     ->update($request->all());
 
-        return redirect()->route('projects.details', $request->name);
+        return redirect()->route('projects.details', strtolower($request->name));
     }
 
     public function deleteSubmit(Request $request, $name)
     {
-        $deletedProject = Projects::where('name', $name)->delete();
+        $deletedProject = Project::where('name', $name)->delete();
 
         $request->session()->flash('flash.banner', 'Project successfully deleted!');
         $request->session()->flash('flash.bannerStyle', 'success');

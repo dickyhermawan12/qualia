@@ -1,12 +1,12 @@
 /*
 ********************************************
  Copyright © 2021 Agora Lab, Inc., all rights reserved.
- AppBuilder and all associated components, source code, APIs, services, and documentation 
- (the “Materials”) are owned by Agora Lab, Inc. and its licensors. The Materials may not be 
- accessed, used, modified, or distributed for any purpose without a license from Agora Lab, Inc.  
- Use without a license or in violation of any license terms and conditions (including use for 
- any purpose competitive to Agora Lab, Inc.’s business) is strictly prohibited. For more 
- information visit https://appbuilder.agora.io. 
+ AppBuilder and all associated components, source code, APIs, services, and documentation
+ (the “Materials”) are owned by Agora Lab, Inc. and its licensors. The Materials may not be
+ accessed, used, modified, or distributed for any purpose without a license from Agora Lab, Inc.
+ Use without a license or in violation of any license terms and conditions (including use for
+ any purpose competitive to Agora Lab, Inc.’s business) is strictly prohibited. For more
+ information visit https://appbuilder.agora.io.
 *********************************************
 */
 import React, {useState} from 'react';
@@ -58,9 +58,18 @@ const CREATE_CHANNEL = gql`
 `;
 
 const Create = () => {
+  let url = window.location.href;
+  let regex = /[?&]([^=#]+)=([^&#]*)/g,
+    params: any = {},
+    match
+  while ((match = regex.exec(url))) {
+    params[match[1]] = match[2]
+    console.log(match[1], match[2])
+  }
+  const { meetingName } = params;
   // const {primaryColor} = useContext(ColorContext);
   const history = useHistory();
-  const [roomTitle, onChangeRoomTitle] = useState('');
+  const [roomTitle, onChangeRoomTitle] = useState(meetingName);
   const [pstnCheckbox, setPstnCheckbox] = useState(false);
   const [hostControlCheckbox, setHostControlCheckbox] = useState(true);
   const [urlView, setUrlView] = useState(null);

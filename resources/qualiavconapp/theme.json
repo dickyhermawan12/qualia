@@ -5,7 +5,7 @@
   "primaryButton": {
     "width": "100%",
     "backgroundColor": "#00AEFC",
-    "borderRadius": 100,
+    "borderRadius": 37,
     "maxWidth": 450,
     "minWidth": 200,
     "minHeight": 45

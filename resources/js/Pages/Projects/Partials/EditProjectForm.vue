@@ -19,7 +19,7 @@
             <!-- Description -->
             <div class="col-span-6 sm:col-span-4">
                 <jet-label for="description" value="Description" />
-                <jet-input id="description" type="text" class="mt-1 block w-full" v-model="form.description" />
+                <jet-textarea id="description" class="mt-1 block w-full" v-model="form.description" />
                 <jet-input-error :message="form.errors.description" class="mt-2" />
             </div>
 
@@ -74,6 +74,7 @@
     import JetFormSection from '@/Jetstream/FormSection.vue'
     import JetConfirmationModal from '@/Jetstream/ConfirmationModal.vue'
     import JetInput from '@/Jetstream/Input.vue'
+    import JetTextarea from '@/Jetstream/Textarea.vue'
     import JetInputError from '@/Jetstream/InputError.vue'
     import JetLabel from '@/Jetstream/Label.vue'
     import JetActionMessage from '@/Jetstream/ActionMessage.vue'
@@ -87,6 +88,7 @@
             JetFormSection,
             JetConfirmationModal,
             JetInput,
+            JetTextarea,
             JetInputError,
             JetLabel,
             JetSecondaryButton,

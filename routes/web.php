@@ -3,7 +3,8 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
-use App\Http\Controllers\ProjectsController;
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\LiveSessionController;
 use App\Http\Middleware\RedirectIfAuthenticated;
 
 /*
@@ -34,22 +35,25 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
     Route::prefix('projects')->group(function() {
         Route::name('projects.')->group(function() {
-            Route::get('/', [ProjectsController::class, 'index'])->name('index');
-            Route::get('/create', [ProjectsController::class, 'create'])->name('create');
-            Route::post('/create', [ProjectsController::class, 'createSubmit'])->name('create-submit');
-            Route::get('/{name}', [ProjectsController::class, 'details'])->name('details');
-
-            Route::get('/{name}/edit', [ProjectsController::class, 'edit'])->name('edit');
-            Route::put('/{name}/edit', [ProjectsController::class, 'editSubmit'])->name('edit-submit');
-
-            Route::delete('/{name}/delete', [ProjectsController::class, 'deleteSubmit'])->name('delete-submit');
+            Route::get('/', [ProjectController::class, 'index'])->name('index');
+            Route::get('/create', [ProjectController::class, 'create'])->name('create');
+            Route::post('/create', [ProjectController::class, 'createSubmit'])->name('create-submit');
+            Route::get('/{name}', [ProjectController::class, 'details'])->name('details');
+            Route::get('/{name}/edit', [ProjectController::class, 'edit'])->name('edit');
+            Route::put('/{name}/edit', [ProjectController::class, 'editSubmit'])->name('edit-submit');
+            Route::delete('/{name}/delete', [ProjectController::class, 'deleteSubmit'])->name('delete-submit');
         });
     });
 
-
-    Route::get('/history', function () {
-        return Inertia::render('History');
-    })->name('history');
+    Route::prefix('{name}/livesessions')->group(function() {
+        Route::name('livesessions.')->group(function() {
+            Route::get('/create', [LiveSessionController::class, 'create'])->name('create');
+            Route::post('/create', [LiveSessionController::class, 'createSubmit'])->name('create-submit');
+            Route::get('/{id}/edit', [LiveSessionController::class, 'edit'])->name('edit');
+            Route::put('/{id}/edit', [LiveSessionController::class, 'editSubmit'])->name('edit-submit');
+            Route::delete('/{id}/delete', [LiveSessionController::class, 'deleteSubmit'])->name('delete-submit');
+        });
+    });
 
     Route::get('/help', function () {
         return Inertia::render('Help');

@@ -1,34 +1,26 @@
 <template>
     <jet-form-section @submitted="submitProjectInformation">
         <template #title>
-            New Project
+            New Live Session
         </template>
 
         <template #description>
-            Give your new project identity.
+            Create new live session for specific participant.
         </template>
 
         <template #form>
-            <!-- Name -->
+            <!-- Participant Name -->
             <div class="col-span-6 sm:col-span-4">
-                <jet-label for="name" value="Name" />
-                <jet-input id="name" type="text" class="mt-1 block w-full" v-model="form.name" autocomplete="name" />
-                <jet-input-error :message="form.errors.name" class="mt-2" />
+                <jet-label for="participant_name" value="Participant Name" />
+                <jet-input id="participant_name" type="text" class="mt-1 block w-full" v-model="form.participant_name" autocomplete="name" />
+                <jet-input-error :message="form.errors.participant_name" class="mt-2" />
             </div>
 
-            <!-- Description -->
+            <!-- Participant Email -->
             <div class="col-span-6 sm:col-span-4">
-                <jet-label for="description" value="Description" />
-                <jet-textarea id="description" class="mt-1 block w-full" v-model="form.description" />
-
-                <jet-input-error :message="form.errors.description" class="mt-2" />
-            </div>
-
-            <!-- Url -->
-            <div class="col-span-6 sm:col-span-4">
-                <jet-label for="url" value="Url" />
-                <jet-input id="url" type="text" class="mt-1 block w-full" v-model="form.url" />
-                <jet-input-error :message="form.errors.url" class="mt-2" />
+                <jet-label for="participant_email" value="Participant Email" />
+                <jet-input id="participant_email" type="text" class="mt-1 block w-full" v-model="form.participant_email" />
+                <jet-input-error :message="form.errors.participant_email" class="mt-2" />
             </div>
         </template>
 
@@ -67,19 +59,20 @@
             JetSecondaryButton,
         },
 
+        props: [ 'project' ],
+
         data() {
             return {
                 form: this.$inertia.form({
-                    name: null,
-                    description: null,
-                    url: null,
+                    participant_name: null,
+                    participant_email: null,
                 }),
             }
         },
 
         methods: {
             submitProjectInformation() {
-                this.form.post(route('projects.create-submit'), {
+                this.form.post(route('livesessions.create-submit', { name: this.project.name }), {
                     errorBag: 'submitProjectInformation',
                     preserveScroll: true,
                 });

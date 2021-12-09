@@ -12,6 +12,7 @@ class LiveSession extends Model
     protected $table = 'live_sessions';
     protected $primaryKey = 'id';
     protected $fillable = [
+        'id_project',
         'live_session_url',
         'recording_url',
         'participant_name',
